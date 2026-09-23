@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ps2-bios-checksum"
+version = "1.0.0"
+description = "Local PS2 BIOS checksum helpers: MD5, SHA-1, and basic dump-size checks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "AllPS2BIOS" }]
+keywords = ["ps2", "bios", "md5", "sha1", "checksum", "emulator"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://allps2bios.com/"
+Documentation = "https://allps2bios.com/"
+Issues = "https://github.com/allps2bios/ps2-bios-checksum/issues"
+
+[project.scripts]
+ps2-bios-checksum = "ps2_bios_checksum.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

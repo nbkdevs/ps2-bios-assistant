@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PS2 BIOS Checker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>PS2 BIOS Checker</h1>
+    <p>Hash a local BIOS file in your browser. Nothing is uploaded.</p>
+  </header>
+
+  <main>
+    <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Select BIOS file">
+      <strong>Drop a BIOS file here</strong>
+      <span>or click to choose (.bin and other dumps)</span>
+    </div>
+    <input id="fileInput" type="file" />
+
+    <div class="row">
+      <button id="pickBtn" class="primary" type="button">Select BIOS File</button>
+      <button id="clearBtn" class="secondary" type="button">Clear</button>
+    </div>
+
+    <div id="progress" class="progress" aria-live="polite">
+      <div>Reading file and calculating checksums…</div>
+      <div class="bar"><i id="barFill"></i></div>
+    </div>
+
+    <div id="error" class="error" role="alert"></div>
+
+    <section id="results" class="results" aria-live="polite">
+      <div class="field">
+        <div class="label">BIOS File</div>
+        <div id="fileName" class="value"></div>
+      </div>
+      <div class="field">
+        <div class="label">File Size</div>
+        <div id="fileSize" class="value plain"></div>
+      </div>
+      <div class="field">
+        <div class="label">MD5</div>
+        <div class="copy-row">
+          <div id="md5" class="value"></div>
+          <button class="copy-btn" type="button" data-copy="md5">Copy</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">SHA-1</div>
+        <div class="copy-row">
+          <div id="sha1" class="value"></div>
+          <button class="copy-btn" type="button" data-copy="sha1">Copy</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">Status</div>
+        <div id="status" class="value plain"></div>
+        <div id="statusDetail" class="note"></div>
+      </div>
+    </section>
+
+    <section class="compare">
+      <label for="expectedHash">Compare with an expected MD5 or SHA-1</label>
+      <input id="expectedHash" type="text" placeholder="Paste a hash to compare" spellcheck="false" />
+      <div id="compareOut" class="compare-out"></div>
+    </section>
+
+    <section class="tips">
+      <details>
+        <summary>What this checks</summary>
+        <p>MD5, SHA-1, and common dump sizes (2 / 4 / 8 / 16 MiB). A match is reference information only — not proof a file is official, genuine, or legal.</p>
+      </details>
+      <details>
+        <summary>Emulator tip</summary>
+        <p>Place your BIOS dump in the folder your emulator expects (PCSX2, AetherSX2, or NetherSX2), then refresh the BIOS list. Keep the file uncompressed.</p>
+      </details>
+      <details>
+        <summary>Privacy</summary>
+        <p>Files are hashed in this popup only. The extension does not request site access and does not upload BIOS contents.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    More guides:
+    <a href="https://allps2bios.com/" target="_blank" rel="noopener noreferrer">allps2bios.com</a>
+  </footer>
+
+  <script src="md5.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

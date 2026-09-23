@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Ps2BiosChecksum</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>AllPS2BIOS</Authors>
+    <Description>Local PS2 BIOS checksum helpers: MD5, SHA-1, and basic dump-size checks.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://allps2bios.com/ps2-bios-nethersx2/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/allps2bios/ps2-bios-checksum</RepositoryUrl>
+    <PackageTags>ps2;bios;checksum;md5;sha1;emulator</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

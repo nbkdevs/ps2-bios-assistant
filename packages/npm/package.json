@@ -1,0 +1,42 @@
+{
+  "name": "ps2-bios-checksum",
+  "version": "1.0.0",
+  "description": "Local PS2 BIOS file helpers: MD5, SHA-1, size formatting, and basic dump-size checks.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "ps2-bios-checksum": "./src/cli.js"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/checksum.test.js"
+  },
+  "keywords": [
+    "ps2",
+    "bios",
+    "md5",
+    "sha1",
+    "checksum",
+    "emulator"
+  ],
+  "author": "AllPS2BIOS",
+  "license": "MIT",
+  "homepage": "https://allps2bios.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allps2bios/ps2-bios-checksum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allps2bios/ps2-bios-checksum/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

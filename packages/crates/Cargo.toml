@@ -1,0 +1,20 @@
+[package]
+name = "ps2_bios_checksum"
+version = "1.0.0"
+edition = "2021"
+description = "Local PS2 BIOS checksum helpers: MD5, SHA-1, and basic dump-size checks."
+license = "MIT"
+readme = "README.md"
+homepage = "https://allps2bios.com/ps2-bios-nethersx2/"
+repository = "https://github.com/allps2bios/ps2-bios-checksum"
+keywords = ["ps2", "bios", "checksum", "md5", "sha1"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+md-5 = "0.10"
+sha1 = "0.10"
+clap = { version = "4", features = ["derive"] }
+
+[[bin]]
+name = "ps2-bios-checksum"
+path = "src/main.rs"
