@@ -1,0 +1,25 @@
+{
+  "name": "nbkdevs/ps2-bios-checksum",
+  "description": "Local PS2 BIOS checksum helpers: MD5, SHA-1, and basic dump-size checks.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "AllPS2BIOS",
+      "homepage": "https://allps2bios.com/ps2-bios-nethersx2/"
+    }
+  ],
+  "homepage": "https://allps2bios.com/ps2-bios-nethersx2/",
+  "support": {
+    "issues": "https://github.com/nbkdevs/ps2-bios-assistant/issues",
+    "source": "https://github.com/nbkdevs/ps2-bios-assistant"
+  },
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AllPs2Bios\\Checksum\\": "src/"
+    }
+  }
+}
